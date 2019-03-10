@@ -10,7 +10,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 
-var texture = new THREE.TextureLoader().load('.\\img\\golgi_body.png');
+var texture = new THREE.TextureLoader().load('./img/golgi_body.png');
 
 material = new THREE.MeshBasicMaterial({map : texture});
 
