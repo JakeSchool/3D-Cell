@@ -23,7 +23,7 @@ function createOrganelle(img, x, z, sizex, sizey){
   scene.add(plane);
 }
 
-createOrganelle("./img/golgi_body.png", 30, 10). 18, 18;
+createOrganelle("./img/golgi_body.png", 30, 10, 18, 18);
 createOrganelle("./img/mitochondria.png", -20, -10, 17, 17);
 createOrganelle("./img/chlrorplast.png", 30, 10, 12, 12);
 
