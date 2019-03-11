@@ -25,7 +25,7 @@ function createOrganelle(img, x, z, sizex, sizey){
 
 createOrganelle("./img/golgi_body.png", 30, 10, 16, 16);
 createOrganelle("./img/mitochondria.png", -20, -10, 15, 15);
-createOrganelle("./img/chloroplast.png", -30, 10, 12, 9);
+createOrganelle("./img/chloroplast.png", -30, 10, 16, 8);
 createOrganelle("./img/rough-er.png", 0, -13, 16, 16);
 
 var nucleusGeometray = new THREE.SphereGeometry(8, 8, 16);
