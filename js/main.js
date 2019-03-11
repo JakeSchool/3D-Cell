@@ -28,13 +28,13 @@ createOrganelle("./img/mitochondria.png", -20, -10, 15, 15);
 createOrganelle("./img/chloroplast.png", -30, 10, 16, 8);
 createOrganelle("./img/rough-er.png", 0, -16, 18, 18);
 
-var nucleusGeometray = new THREE.SphereGeometry(8, 8, 16);
+var nucleusGeometray = new THREE.SphereGeometry(14, 8, 16);
 var nucleusMaterial  = new THREE.MeshBasicMaterial({color: 0x0000CC, opacity: 0.5});
 nucleusMaterial.transparent = true;
 var nucleusMesh = new THREE.Mesh(nucleusGeometray, nucleusMaterial);
 nucleusMesh.position.y = 10;
 
-var nucleousGeometray = new THREE.SphereGeometry(4, 8, 16);
+var nucleousGeometray = new THREE.SphereGeometry(7, 8, 16);
 var nucleousMaterial  = new THREE.MeshBasicMaterial({color: 0x0000DD});
 var nucleousMesh = new THREE.Mesh(nucleousGeometray, nucleousMaterial);
 nucleousMesh.position.y = 11;
@@ -42,8 +42,8 @@ nucleousMesh.position.y = 11;
 scene.add(nucleusMesh);
 scene.add(nucleousMesh);
 
-var cellGeometry = new THREE.BoxGeometry(100, 20, 75);
-var membraneGeometry = new THREE.BoxGeometry(94, 19, 74);
+var cellGeometry = new THREE.BoxGeometry(150, 20, 75);
+var membraneGeometry = new THREE.BoxGeometry(146, 19, 74);
 var membraneMaterial = new THREE.MeshBasicMaterial({color: 0xF9FF7E});
 var membraneMesh = new THREE.Mesh(membraneGeometry, membraneMaterial);
 membraneMesh.position.x += 2;
