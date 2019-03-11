@@ -13,7 +13,7 @@ function createOrganelle(img, x, z){
   var texture = new THREE.TextureLoader().load(img);
 
   var material = new THREE.MeshBasicMaterial({map : texture});
-  //material.transparent = true;
+  material.transparent = true;
 
   var plane = new THREE.Mesh(new THREE.PlaneGeometry(20, 20), material);
   plane.rotation.x = -(Math.PI / 2);
