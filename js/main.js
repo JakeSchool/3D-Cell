@@ -24,6 +24,7 @@ function createOrganelle(img, x, z){
 }
 
 createOrganelle("./img/golgi_body.png", 30, 10);
+createOrganelle("./img/mitochondria.png", -30, -10);
 
 var cellGeometry = new THREE.BoxGeometry(100, 20, 50);
 var membraneGeometry = new THREE.BoxGeometry(90, 19, 49);
