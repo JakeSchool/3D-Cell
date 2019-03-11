@@ -9,13 +9,13 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-function createOrganelle(img, x, z){
+function createOrganelle(img, x, z, sizex, sizey){
   var texture = new THREE.TextureLoader().load(img);
 
   var material = new THREE.MeshBasicMaterial({map : texture});
   material.transparent = true;
 
-  var plane = new THREE.Mesh(new THREE.PlaneGeometry(20, 20), material);
+  var plane = new THREE.Mesh(new THREE.PlaneGeometry(sizex, sizey), material);
   plane.rotation.x = -(Math.PI / 2);
   plane.position.x = x;
   plane.position.y = 10.5;
@@ -23,11 +23,11 @@ function createOrganelle(img, x, z){
   scene.add(plane);
 }
 
-createOrganelle("./img/golgi_body.png", 30, 10);
-createOrganelle("./img/mitochondria.png", -20, -10);
-createOrganelle("./img/chlrorplast.png", 30, 10);
+createOrganelle("./img/golgi_body.png", 30, 10). 18, 18;
+createOrganelle("./img/mitochondria.png", -20, -10, 17, 17);
+createOrganelle("./img/chlrorplast.png", 30, 10, 12, 12);
 
-var nucleusGeometray = new THREE.SphereGeometry(10, 8, 16);
+var nucleusGeometray = new THREE.SphereGeometry(8, 8, 16);
 var nucleusMaterial  = new THREE.MeshBasicMaterial({color: 0x0000CC, opacity: 0.5});
 nucleusMaterial.transparent = true;
 var nucleusMesh = new THREE.Mesh(nucleusGeometray, nucleusMaterial);
