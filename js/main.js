@@ -23,10 +23,10 @@ function createOrganelle(img, x, z, sizex, sizey){
   scene.add(plane);
 }
 
-createOrganelle("./img/golgi_body.png", 30, 10, 16, 16);
+createOrganelle("./img/golgi_body.png", 30, 10, 20, 20);
 createOrganelle("./img/mitochondria.png", -20, -10, 15, 15);
 createOrganelle("./img/chloroplast.png", -30, 10, 16, 8);
-createOrganelle("./img/rough-er.png", 0, -13, 16, 16);
+createOrganelle("./img/rough-er.png", 0, -16, 18, 18);
 
 var nucleusGeometray = new THREE.SphereGeometry(8, 8, 16);
 var nucleusMaterial  = new THREE.MeshBasicMaterial({color: 0x0000CC, opacity: 0.5});
