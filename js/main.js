@@ -13,17 +13,17 @@ function createOrganelle(img, x, z){
   var texture = new THREE.TextureLoader().load(img);
 
   var material = new THREE.MeshBasicMaterial({map : texture});
-  material.transparent = true;
+  //material.transparent = true;
 
   var plane = new THREE.Mesh(new THREE.PlaneGeometry(20, 20), material);
-  plane.rotation.z = Math.PI / 2;
+  plane.rotation.x = -(Math.PI / 2);
   plane.position.x = x;
-  plane.position.y = 21;
+  plane.position.y = 10.5;
   plane.position.z = z;
-  scene.add(plane)
+  scene.add(plane);
 }
 
-createOrganelle("./img/gulgi_body.png", )
+createOrganelle("./img/gulgi_body.png", 30, 10)
 
 var cellGeometry = new THREE.BoxGeometry(100, 20, 50);
 var membraneGeometry = new THREE.BoxGeometry(90, 19, 49);
