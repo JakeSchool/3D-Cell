@@ -43,6 +43,19 @@ nucleousMesh.position.y = 11;
 scene.add(nucleusMesh);
 scene.add(nucleousMesh);
 
+var arrayX = [-50, 60, 60, -15];
+var arrayZ = [30, 30, -30, -20];
+for(var i = 0; i < 4; i++){
+  var geometry = new THREE.SphereGeometry(4, 8, 16);
+  var material = new THREE.MeshBasicMaterial({color: 0xFF1111});
+  var mesh = new THRE.Mesh(geometry, material);
+  mesh.position.y = 21;
+  mesh.position.x = arrayX[i];
+  mesh.position.z = arrayZ[i];
+  
+  scene.add(mesh);
+}
+
 var cellGeometry = new THREE.BoxGeometry(150, 20, 75);
 var membraneGeometry = new THREE.BoxGeometry(145, 19, 74);
 var membraneMaterial = new THREE.MeshBasicMaterial({color: 0xF9FF7E});
