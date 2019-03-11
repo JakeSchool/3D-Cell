@@ -26,9 +26,10 @@ function createOrganelle(img, x, z){
 createOrganelle("./img/gulgi_body.png", )
 
 var cellGeometry = new THREE.BoxGeometry(100, 20, 50);
-var membraneGeometry = new THREE.BoxGeometry(99, 19, 49);
+var membraneGeometry = new THREE.BoxGeometry(90, 19, 49);
 var membraneMaterial = new THREE.MeshBasicMaterial({color: 0xF9FF7E});
 var membraneMesh = new THREE.Mesh(membraneGeometry, membraneMaterial);
+membraneMesh.position.x += 4;
 
 var cellMaterials = [
     new THREE.MeshBasicMaterial({color:0x00EE00, transparent:true, opacity:0.6, side: THREE.DoubleSide}),
