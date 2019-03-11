@@ -24,7 +24,22 @@ function createOrganelle(img, x, z){
 }
 
 createOrganelle("./img/golgi_body.png", 30, 10);
-createOrganelle("./img/mitochondria.png", -30, -10);
+createOrganelle("./img/mitochondria.png", -20, -10);
+createOrganelle("./img/chlrorplast.png", 30, 10);
+
+var nucleusGeometray = new THREE.SphereGeometry(10, 8, 16);
+var nucleusMaterial  = new THREE.MeshBasicMaterial({color: 0x0000CC, opacity: 0.5});
+nucleusMaterial.transparent = true;
+var nucleusMesh = new THREE.Mesh(nucleusGeometray, nucleusMaterial);
+nucleusMesh.position.y = 10;
+
+var nucleousGeometray = new THREE.SphereGeometry(4, 8, 16);
+var nucleousMaterial  = new THREE.MeshBasicMaterial({color: 0x0000DD});
+var nucleousMesh = new THREE.Mesh(nucleousGeometray, nucleousMaterial);
+nucleousMesh.position.y = 11;
+
+scene.add(nucleusMesh);
+scene.add(nucleousMesh);
 
 var cellGeometry = new THREE.BoxGeometry(100, 20, 50);
 var membraneGeometry = new THREE.BoxGeometry(90, 19, 49);
