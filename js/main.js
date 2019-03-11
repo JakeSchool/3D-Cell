@@ -9,7 +9,7 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-function createOrganelle(img, x, , z){
+function createOrganelle(img, x, z){
   var texture = new THREE.TextureLoader().load(img);
 
   var material = new THREE.MeshBasicMaterial({map : texture});
