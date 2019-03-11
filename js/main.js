@@ -42,11 +42,11 @@ nucleousMesh.position.y = 11;
 scene.add(nucleusMesh);
 scene.add(nucleousMesh);
 
-var cellGeometry = new THREE.BoxGeometry(100, 20, 50);
-var membraneGeometry = new THREE.BoxGeometry(90, 19, 49);
+var cellGeometry = new THREE.BoxGeometry(100, 20, 75);
+var membraneGeometry = new THREE.BoxGeometry(94, 19, 74);
 var membraneMaterial = new THREE.MeshBasicMaterial({color: 0xF9FF7E});
 var membraneMesh = new THREE.Mesh(membraneGeometry, membraneMaterial);
-membraneMesh.position.x += 4;
+membraneMesh.position.x += 2;
 
 var cellMaterials = [
     new THREE.MeshBasicMaterial({color:0x00EE00, transparent:true, opacity:0.6, side: THREE.DoubleSide}),
