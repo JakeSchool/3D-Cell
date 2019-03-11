@@ -9,16 +9,21 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+function createOrganelle(img, x, , z){
+  var texture = new THREE.TextureLoader().load(img);
 
-var texture = new THREE.TextureLoader().load('./img/golgi_body.png');
+  var material = new THREE.MeshBasicMaterial({map : texture});
+  material.transparent = true;
 
-material = new THREE.MeshBasicMaterial({map : texture});
+  var plane = new THREE.Mesh(new THREE.PlaneGeometry(20, 20), material);
+  plane.rotation.z = Math.PI / 2;
+  plane.position.x = x;
+  plane.position.y = 21;
+  plane.position.z = z;
+  scene.add(plane)
+}
 
-plane = new THREE.Mesh(new THREE.PlaneGeometry(20, 20), material);
-plane.position.x = 200;
-scene.add(plane)
-
-
+createOrganelle("./img/gulgi_body.png", )
 
 var cellGeometry = new THREE.BoxGeometry(100, 20, 50);
 var membraneGeometry = new THREE.BoxGeometry(99, 19, 49);
@@ -27,7 +32,7 @@ var membraneMesh = new THREE.Mesh(membraneGeometry, membraneMaterial);
 
 var cellMaterials = [
     new THREE.MeshBasicMaterial({color:0x00EE00, transparent:true, opacity:0.6, side: THREE.DoubleSide}),
-    new THREE.MeshBasicMaterial({color:0x00EE00, transparent:true, opacity:0.6, side: THREE.DoubleSide}),
+    new THREE.MeshBasicMaterial({color:0x00EE00, transparent:true, opacity:0.0, side: THREE.DoubleSide}),
     new THREE.MeshBasicMaterial({color:0xFF876D, transparent:true, opacity:0.6, side: THREE.DoubleSide}),
     new THREE.MeshBasicMaterial({color:0x00EE00, transparent:true, opacity:0.6, side: THREE.DoubleSide}),
     new THREE.MeshBasicMaterial({color:0x00EE00, transparent:true, opacity:0.6, side: THREE.DoubleSide}),
