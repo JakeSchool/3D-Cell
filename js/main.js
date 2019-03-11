@@ -48,8 +48,8 @@ var arrayZ = [30, 30, -30, -20];
 for(var i = 0; i < 4; i++){
   var geometry = new THREE.SphereGeometry(4, 8, 16);
   var material = new THREE.MeshBasicMaterial({color: 0xFF1111});
-  var mesh = new THRE.Mesh(geometry, material);
-  mesh.position.y = 21;
+  var mesh = new THREE.Mesh(geometry, material);
+  mesh.position.y = 11;
   mesh.position.x = arrayX[i];
   mesh.position.z = arrayZ[i];
   
