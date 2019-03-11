@@ -23,7 +23,7 @@ function createOrganelle(img, x, z){
   scene.add(plane);
 }
 
-createOrganelle("../img/gulgi_body.png", 30, 10);
+createOrganelle("../img/golgi_body.png", 30, 10);
 
 var cellGeometry = new THREE.BoxGeometry(100, 20, 50);
 var membraneGeometry = new THREE.BoxGeometry(90, 19, 49);
