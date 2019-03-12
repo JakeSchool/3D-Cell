@@ -30,7 +30,9 @@ createOrganelle("https://penguins904.github.io/3D-Cell/img/rough-er.png", 5, -20
 createOrganelle("https://penguins904.github.io/3D-Cell/img/vacuole.png", 50, -15, 30, 30);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/smooth-er.png", -15, -10, 15, 15);
 
-for(var i = 0; i < 6; i++){
+var xArray = [20, -25, 37, -14, 27, 0, -47];
+var zArray = [0, 0, 20, -27, -20, 27, 0];
+for(var i = 0; i < 7; i++){
   var texture = new THREE.TextureLoader().load("https://penguins904.github.io/3D-Cell/img/ribosome.png");
 
   var material = new THREE.MeshBasicMaterial({map : texture});
@@ -38,15 +40,9 @@ for(var i = 0; i < 6; i++){
 
   var plane = new THREE.Mesh(new THREE.PlaneGeometry(5, 5), material);
   plane.rotation.x = -(Math.PI / 2);
-  plane.position.x = Math.floor(Math.random() * (50 - -50)) - 50;
-  plane.position.y = 10.5;
-  plane.position.z = Math.floor(Math.random() * (35 - -35)) - 35;
-  if (plane.position.x > -7 && plane.position.x < 7) {
-    plane.position.x = Math.floor(Math.random() * (50 - -50)) - 50;
-  }
-  if (plane.position.z > -7 && plane.position.z < 7) {
-    plane.position.z = Math.floor(Math.random() * (35 - -35)) - 35;
-  }
+  plane.position.x =xArray[i];
+  plane.position.z = zArray[i];
+  plane.position.y =10.5;
   scene.add(plane);
 }
 
