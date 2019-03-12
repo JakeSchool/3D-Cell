@@ -27,10 +27,10 @@ createOrganelle("https://penguins904.github.io/3D-Cell/img/golgi_body.png", 50, 
 createOrganelle("https://penguins904.github.io/3D-Cell/img/mitochondria.png", -50, -25, 15, 15);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/chloroplast.png", -30, 10, 16, 10);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/rough-er.png", 5, -20, 30, 30);
-createOrganelle("https://penguins904.github.io/3D-Cell/img/vacuole.png", 50, -15, 30, 30);
+createOrganelle("https://penguins904.github.io/3D-Cell/img/vacuole.png", 30, -15, 30, 30);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/smooth-er.png", -15, -10, 15, 15);
 
-var xArray = [20, -25, 37, -14, 27, 0, -47];
+var xArray = [20, -25, 67, -14, 57, 0, -57];
 var zArray = [0, 0, 20, -27, -20, 27, 0];
 for(var i = 0; i < 7; i++){
   var texture = new THREE.TextureLoader().load("https://penguins904.github.io/3D-Cell/img/ribosome.png");
