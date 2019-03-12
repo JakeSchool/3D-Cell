@@ -26,8 +26,9 @@ function createOrganelle(img, x, z, sizex, sizey){
 createOrganelle("https://penguins904.github.io/3D-Cell/img/golgi_body.png", 30, 10, 20, 20);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/mitochondria.png", -50, -25, 15, 15);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/chloroplast.png", -30, 10, 16, 10);
-createOrganelle("https://penguins904.github.io/3D-Cell/img/rough-er.png", 0, -20, 30, 30);
+createOrganelle("https://penguins904.github.io/3D-Cell/img/rough-er.png", 5, -20, 30, 30);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/vacuole.png", 50, -15, 30, 30);
+createOrganelle("https://penguins904.github.io/3D-Cell/img/smooth-er.png", -10, -20, 25, 15);
 
 var nucleusGeometray = new THREE.SphereGeometry(14, 8, 16);
 var nucleusMaterial  = new THREE.MeshBasicMaterial({color: 0x0000CC, opacity: 0.5});
