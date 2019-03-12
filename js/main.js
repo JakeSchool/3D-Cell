@@ -23,7 +23,7 @@ function createOrganelle(img, x, z, sizex, sizey){
   scene.add(plane);
 }
 
-createOrganelle("https://penguins904.github.io/3D-Cell/img/golgi_body.png", 30, 10, 20, 20);
+createOrganelle("https://penguins904.github.io/3D-Cell/img/golgi_body.png", 50, 20, 20, 20);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/mitochondria.png", -50, -25, 15, 15);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/chloroplast.png", -30, 10, 16, 10);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/rough-er.png", 5, -20, 30, 30);
