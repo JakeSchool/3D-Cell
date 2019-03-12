@@ -74,7 +74,7 @@ for(var i = 0; i < 4; i++){
 }
 
 var cellGeometry = new THREE.BoxGeometry(150, 20, 75);
-var membraneGeometry = new THREE.BoxGeometry(145, 19, 74);
+var membraneGeometry = new THREE.BoxGeometry(145, 19, 73);
 var membraneMaterial = new THREE.MeshBasicMaterial({color: 0xF9FF7E});
 var membraneMesh = new THREE.Mesh(membraneGeometry, membraneMaterial);
 membraneMesh.position.x += 2;
