@@ -28,7 +28,27 @@ createOrganelle("https://penguins904.github.io/3D-Cell/img/mitochondria.png", -5
 createOrganelle("https://penguins904.github.io/3D-Cell/img/chloroplast.png", -30, 10, 16, 10);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/rough-er.png", 5, -20, 30, 30);
 createOrganelle("https://penguins904.github.io/3D-Cell/img/vacuole.png", 50, -15, 30, 30);
-createOrganelle("https://penguins904.github.io/3D-Cell/img/smooth-er.png", -15, -15, 25, 15);
+createOrganelle("https://penguins904.github.io/3D-Cell/img/smooth-er.png", -15, -10, 15, 15);
+
+for(var i = 0; i < 6; i++){
+  var texture = new THREE.TextureLoader().load("https://penguins904.github.io/3D-Cell/img/ribosome.png");
+
+  var material = new THREE.MeshBasicMaterial({map : texture});
+  material.transparent = true;
+
+  var plane = new THREE.Mesh(new THREE.PlaneGeometry(5, 5), material);
+  plane.rotation.x = -(Math.PI / 2);
+  plane.position.x = Math.floor(Math.random() * (50 - -50)) - 50;
+  plane.position.y = 10.5;
+  plane.position.z = Math.floor(Math.random() * (35 - -35)) - 35;
+  if (plane.position.x > -7 && plane.position.x < 7) {
+    plane.position.x = Math.floor(Math.random() * (50 - -50)) - 50;
+  }
+  if (plane.position.z > -7 && plane.position.z < 7) {
+    plane.position.z = Math.floor(Math.random() * (35 - -35)) - 35;
+  }
+  scene.add(plane);
+}
 
 var nucleusGeometray = new THREE.SphereGeometry(14, 8, 16);
 var nucleusMaterial  = new THREE.MeshBasicMaterial({color: 0x0000CC, opacity: 0.5});
@@ -44,7 +64,7 @@ nucleousMesh.position.y = 11;
 scene.add(nucleusMesh);
 scene.add(nucleousMesh);
 
-var arrayX = [-50, 60, 60, -25];
+var arrayX = [-50, 60, 60, -30];
 var arrayZ = [30, 30, -30, -20];
 for(var i = 0; i < 4; i++){
   var geometry = new THREE.SphereGeometry(4, 8, 16);
