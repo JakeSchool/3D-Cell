@@ -24,9 +24,9 @@ function createOrganelle(img, x, z, sizex, sizey){
 }
 
 createOrganelle("./img/golgi_body.png", 30, 10, 20, 20);
-createOrganelle("./img/mitochondria.png", -20, -10, 15, 15);
+createOrganelle("./img/mitochondria.png", -50, -25, 15, 15);
 createOrganelle("./img/chloroplast.png", -30, 10, 16, 10);
-createOrganelle("./img/rough-er.png", 0, -16, 18, 18);
+createOrganelle("./img/rough-er.png", 0, -30, 30, 30);
 createOrganelle("./img/vacuole.png", 50, -15, 30, 30);
 
 var nucleusGeometray = new THREE.SphereGeometry(14, 8, 16);
@@ -43,7 +43,7 @@ nucleousMesh.position.y = 11;
 scene.add(nucleusMesh);
 scene.add(nucleousMesh);
 
-var arrayX = [-50, 60, 60, -15];
+var arrayX = [-50, 60, 60, -25];
 var arrayZ = [30, 30, -30, -20];
 for(var i = 0; i < 4; i++){
   var geometry = new THREE.SphereGeometry(4, 8, 16);
@@ -52,7 +52,7 @@ for(var i = 0; i < 4; i++){
   mesh.position.y = 11;
   mesh.position.x = arrayX[i];
   mesh.position.z = arrayZ[i];
-  
+
   scene.add(mesh);
 }
 
