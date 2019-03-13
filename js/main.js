@@ -18,7 +18,7 @@ function createOrganelle(img, x, z, sizex, sizey){
   var plane = new THREE.Mesh(new THREE.PlaneGeometry(sizex, sizey), material);
   plane.rotation.x = -(Math.PI / 2);
   plane.position.x = x;
-  plane.position.y = 11.5;
+  plane.position.y = 12.5;
   plane.position.z = z;
   scene.add(plane);
 }
@@ -42,7 +42,7 @@ for(var i = 0; i < 7; i++){
   plane.rotation.x = -(Math.PI / 2);
   plane.position.x =xArray[i];
   plane.position.z = zArray[i];
-  plane.position.y =10.5;
+  plane.position.y = 12.5;
   scene.add(plane);
 }
 
